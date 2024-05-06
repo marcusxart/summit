@@ -8,21 +8,16 @@ const { v4: uuidv4 } = require('uuid');
  *      import('sequelize').ModelCtor<import('sequelize').Model>
  * } The User model defined by Sequelize.
  */
-const user = (sequelize) => {
-  const user = sequelize.define(
-    'users',
+const quest = (sequelize) => {
+  const quest = sequelize.define(
+    'images',
     {
       id: {
         type: DataTypes.UUID,
         defaultValue: () => uuidv4(),
         primaryKey: true,
       },
-      username: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        unique: true,
-      },
-      password: {
+      image_url: {
         type: DataTypes.STRING,
         allowNull: false,
       },
@@ -31,7 +26,7 @@ const user = (sequelize) => {
       timestamps: true,
     },
   );
-  return user;
+  return quest;
 };
 
-module.exports = user;
+module.exports = quest;
