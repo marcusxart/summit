@@ -43,9 +43,9 @@ const Login = () => {
               >
                 <div className="flex flex-col gap-4">
                   <InputField
-                    label="Email"
-                    type="email"
-                    placeholder="Email"
+                    label="Username"
+                    type="text"
+                    placeholder="Username"
                     required
                   />
                   <InputField
